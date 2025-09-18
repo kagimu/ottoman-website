@@ -38,11 +38,11 @@ const categoryImages = {
 
 // Example subcategories data
 const subcategoriesData: Record<ProductCategory, string[]> = {
-  agricultural: ['Farm Tools', 'Seeds', 'Fertilizers', 'Irrigation Systems','Protective Gear'],
-  beekeeping: ['Bee Hives', 'Protective Gear', 'Honey Extractors'],
-  vocational: ['Welding', 'Carpentry', 'Plumbing', 'Electronics', 'Tailoring', 'Hairdressing'],
-  medical: ['Diagnostic Equipment', 'Surgical Tools', 'Lab Equipment'],
-  promotional: ['T-Shirts', 'Banners', 'Flyers', 'Custom Gifts']
+  agricultural: ['Farm Tools','Irrigation Equipment','Farm Machinery'],
+  beekeeping: [],
+  vocational: ['Welding', 'Carpentry', 'Plumbing', 'Electrical', 'Tailoring', 'Hairdressing'],
+  medical: [],
+  promotional: ['Printers & Cutters', 'Engravers', 'Embroidery Machines', 'Milling Machines']
 };
 
 export default function Marketplace() {
@@ -53,6 +53,7 @@ export default function Marketplace() {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [isProductModalOpen, setIsProductModalOpen] = useState(false);
+  
 
   // === Filter Logic ===
   const filteredProducts = useMemo(() => {
