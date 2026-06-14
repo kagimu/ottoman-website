@@ -1,6 +1,6 @@
 # GitHub Copilot Toolbox — MCP & Skills awareness
 
-_Generated: 2026-06-14T17:03:40.945Z_
+_Generated: 2026-06-14T17:51:05.021Z_
 
 ## How to use this report
 
@@ -15,7 +15,7 @@ _Generated: 2026-06-14T17:03:40.945Z_
 
 Workspace `mcp.json` _(folder: ottoman-showcase-hub)_
 
-- **c:\Users\Joachim\Documents\GitHub\ottoman-showcase-hub\.vscode\mcp.json** — _File missing_
+- **c:\Users\Joachim\Desktop\ottoman-showcase-hub\.vscode\mcp.json** — _File missing_
 
 _No active workspace servers in mcp.json._
 
