@@ -54,7 +54,7 @@ export default function Marketplace() {
   
 
   // Exclude promotional products from marketplace listing
-  const marketplaceProducts = useMemo(() => allProducts.filter(p => p.category !== 'promotional'), []);
+  const marketplaceProducts = useMemo(() => allProducts.filter(p => p.category !== 'promotional'), [allProducts]);
 
   // Visible categories for marketplace (exclude promotional)
   const visibleCategories = categories.filter((c) => c.id !== 'promotional');
@@ -99,7 +99,7 @@ export default function Marketplace() {
     });
 
     return products;
-  }, [selectedCategory, selectedSubcategories, searchQuery, sortBy]);
+  }, [selectedCategory, selectedSubcategories, searchQuery, sortBy, marketplaceProducts]);
 
   const handleViewProduct = (product: Product) => {
     setSelectedProduct(product);

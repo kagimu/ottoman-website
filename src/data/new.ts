@@ -1,6 +1,4 @@
-export interface Product { id: string; name: string; category: ProductCategory; subcategory: string; price: number; description: string; specifications: Record<string, string>; images: string[]; inStock: boolean; featured: boolean; manufacturer: string; model: string; }
- export type ProductCategory = 
- 'agricultural' | 'beekeeping' | 'vocational' | 'water' | 'promotional'; 
+import type { Product, ProductCategory } from './products';
  export const categories =
   [ { id: 'agricultural', name: 'Agricultural Tools & Equipment', description: 'Professional farming and agricultural machinery for enhanced productivity', icon: '🚜' }, { id: 'beekeeping', name: 'Beekeeping Equipment', description: 'Complete beekeeping solutions for honey production and hive management', icon: '🐝' }, { id: 'vocational', name: 'Vocational Items', description: 'Professional tools and equipment for various trades and vocations', icon: '🔧' }, { id: 'water', name: 'Water Equipment', description: 'Advanced water systems and treatment solutions', icon: '💧' }, { id: 'promotional', name: 'Promotional Items', description: 'Custom branded products and corporate promotional materials', icon: '🎁' } ] as const;
 const agriculturalProducts: Product[] =[

@@ -2,7 +2,7 @@ export interface Product {
   id: string;
   name: string;
   category: ProductCategory;
-  subcategory: string;
+  subcategory?: string;
   price: number;
   description: string;
   specifications: Record<string, string>;
@@ -13,7 +13,7 @@ export interface Product {
   model: string;
 }
 
-export type ProductCategory = 'agricultural' | 'beekeeping' | 'vocational' | 'water';
+export type ProductCategory = 'agricultural' | 'beekeeping' | 'vocational' | 'water' | 'promotional';
 
 export const categories = [
   { 
