@@ -16,7 +16,6 @@ import ProductModal from '@/components/marketplace/ProductModal';
 import {
   allProducts,
   categories,
-  getProductsByCategory,
   Product,
   ProductCategory
 } from '@/data/new';
@@ -25,15 +24,14 @@ import { cn } from '@/lib/utils';
 import categoryAgricultural from '@/assets/category-agricultural.jpg';
 import categoryBeekeeping from '@/assets/category-beekeeping.jpg';
 import categoryVocational from '@/assets/category-vocational.jpg';
-import categoryMedical from '@/assets/category-medical.jpg';
-import categoryPromotional from '@/assets/category-promotional.jpg';
+import categoryWater from '@/assets/category-water.jpg';
+
 
 const categoryImages = {
   agricultural: categoryAgricultural,
   beekeeping: categoryBeekeeping,
   vocational: categoryVocational,
-  medical: categoryMedical,
-  promotional: categoryPromotional
+  water: categoryWater
 };
 
 // Example subcategories data
@@ -41,8 +39,8 @@ const subcategoriesData: Record<ProductCategory, string[]> = {
   agricultural: ['Farm Tools','Irrigation Equipment','Farm Machinery'],
   beekeeping: [],
   vocational: ['Welding', 'Carpentry', 'Plumbing', 'Electrical', 'Tailoring', 'Hairdressing'],
-  medical: [],
-  promotional: ['Printers & Cutters', 'Engravers', 'Embroidery Machines', 'Milling Machines']
+  water: [],
+  promotional: []
 };
 
 export default function Marketplace() {
@@ -55,9 +53,15 @@ export default function Marketplace() {
   const [isProductModalOpen, setIsProductModalOpen] = useState(false);
   
 
+  // Exclude promotional products from marketplace listing
+  const marketplaceProducts = useMemo(() => allProducts.filter(p => p.category !== 'promotional'), []);
+
+  // Visible categories for marketplace (exclude promotional)
+  const visibleCategories = categories.filter((c) => c.id !== 'promotional');
+
   // === Filter Logic ===
   const filteredProducts = useMemo(() => {
-    let products = [...allProducts];
+    let products = [...marketplaceProducts];
 
     if (selectedCategory !== 'all') {
       products = products.filter((product) => product.category === selectedCategory);
@@ -155,10 +159,10 @@ export default function Marketplace() {
                 setSelectedSubcategories([]);
               }}
             >
-              All Categories ({allProducts.length})
+              All Categories ({marketplaceProducts.length})
             </div>
-            {categories.map((category) => {
-              const count = getProductsByCategory(category.id as ProductCategory).length;
+            {visibleCategories.map((category) => {
+              const count = marketplaceProducts.filter((p) => p.category === category.id).length;
               return (
                 <div
                   key={category.id}

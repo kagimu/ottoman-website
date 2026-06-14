@@ -25,14 +25,14 @@ import heroSlide9 from '@/assets/14974.jpg';
 import categoryAgricultural from '@/assets/category-agricultural.jpg';
 import categoryBeekeeping from '@/assets/category-beekeeping.jpg';
 import categoryVocational from '@/assets/category-vocational.jpg';
-import categoryMedical from '@/assets/category-medical.jpg';
+import categoryWater from '@/assets/category-water.jpg';
 import categoryPromotional from '@/assets/category-promotional.jpg';
 
 const categoryImages = {
   agricultural: categoryAgricultural,
   beekeeping: categoryBeekeeping,
   vocational: categoryVocational,
-  medical: categoryMedical,
+  water: categoryWater,
   promotional: categoryPromotional
 };
 
@@ -70,9 +70,9 @@ const heroSlides = [
   },
   {
     image: heroSlide6,
-    title: 'Medical Equipment',
+    title: 'Water Equipment',
     description:
-      'Top-notch equipment for healthcare and medical professionals.',
+      'Top-notch solutions for water management and treatment.',
   },
   {
     image: heroSlide7,

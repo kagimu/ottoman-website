@@ -109,7 +109,7 @@ export default function CaseStudy() {
     const colors = {
       'Agricultural': 'bg-green-100 text-green-800 border-green-200',
       'Beekeeping': 'bg-yellow-100 text-yellow-800 border-yellow-200',
-      'Medical': 'bg-blue-100 text-blue-800 border-blue-200',
+      'Water': 'bg-sky-100 text-sky-800 border-sky-200',
       'Vocational': 'bg-purple-100 text-purple-800 border-purple-200',
       'Promotional': 'bg-pink-100 text-pink-800 border-pink-200'
     };

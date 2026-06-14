@@ -245,7 +245,7 @@ export default function Contact() {
                           <SelectItem value="agricultural">Agricultural Equipment</SelectItem>
                           <SelectItem value="beekeeping">Beekeeping Equipment</SelectItem>
                           <SelectItem value="vocational">Vocational Tools</SelectItem>
-                          <SelectItem value="medical">Medical Equipment</SelectItem>
+                          <SelectItem value="water">Water Equipment</SelectItem>
                           <SelectItem value="promotional">Promotional Items</SelectItem>
                           <SelectItem value="general">General Inquiry</SelectItem>
                         </SelectContent>

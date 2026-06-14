@@ -12,7 +12,7 @@ const getCategoryColor = (category: string) => {
   const colors = {
     'Agricultural': 'bg-green-100 text-green-800 border-green-200',
     'Beekeeping': 'bg-yellow-100 text-yellow-800 border-yellow-200', 
-    'Medical': 'bg-blue-100 text-blue-800 border-blue-200',
+    'Water': 'bg-sky-100 text-sky-800 border-sky-200',
     'Vocational': 'bg-purple-100 text-purple-800 border-purple-200',
     'Promotional': 'bg-pink-100 text-pink-800 border-pink-200'
   };
@@ -37,7 +37,7 @@ export default function Projects() {
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
               Explore our successful implementations and case studies across various industries. 
-              From agricultural modernization to medical facility upgrades, we deliver excellence.
+              From agricultural modernization to water systems upgrades, we deliver excellence.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2">

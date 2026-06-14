@@ -1,8 +1,8 @@
 export interface Product { id: string; name: string; category: ProductCategory; subcategory: string; price: number; description: string; specifications: Record<string, string>; images: string[]; inStock: boolean; featured: boolean; manufacturer: string; model: string; }
  export type ProductCategory = 
- 'agricultural' | 'beekeeping' | 'vocational' | 'medical' | 'promotional'; 
+ 'agricultural' | 'beekeeping' | 'vocational' | 'water' | 'promotional'; 
  export const categories =
-  [ { id: 'agricultural', name: 'Agricultural Tools & Equipment', description: 'Professional farming and agricultural machinery for enhanced productivity', icon: '🚜' }, { id: 'beekeeping', name: 'Beekeeping Equipment', description: 'Complete beekeeping solutions for honey production and hive management', icon: '🐝' }, { id: 'vocational', name: 'Vocational Items', description: 'Professional tools and equipment for various trades and vocations', icon: '🔧' }, { id: 'medical', name: 'Medical Equipment', description: 'Advanced medical devices and healthcare solutions', icon: '🏥' }, { id: 'promotional', name: 'Promotional Items', description: 'Custom branded products and corporate promotional materials', icon: '🎁' } ] as const;
+  [ { id: 'agricultural', name: 'Agricultural Tools & Equipment', description: 'Professional farming and agricultural machinery for enhanced productivity', icon: '🚜' }, { id: 'beekeeping', name: 'Beekeeping Equipment', description: 'Complete beekeeping solutions for honey production and hive management', icon: '🐝' }, { id: 'vocational', name: 'Vocational Items', description: 'Professional tools and equipment for various trades and vocations', icon: '🔧' }, { id: 'water', name: 'Water Equipment', description: 'Advanced water systems and treatment solutions', icon: '💧' }, { id: 'promotional', name: 'Promotional Items', description: 'Custom branded products and corporate promotional materials', icon: '🎁' } ] as const;
 const agriculturalProducts: Product[] =[
   {
     "id": "1",
@@ -388,11 +388,6 @@ const vocationalProducts: Product[] = [
 ];
 
 
-// ---------------------- Medical Products ----------------------
-const medicalProducts: Product[] = [
- 
-];
-
 // ---------------------- Promotional Products ----------------------
 const promotionalProducts: Product[] = [
   {
@@ -430,7 +425,7 @@ export const allProducts: Product[] = [
   ...agriculturalProducts,
   ...beekeepingProducts,
   ...vocationalProducts,
-  ...medicalProducts,
+  ...waterProducts,
   ...promotionalProducts
 ];
 
@@ -484,15 +479,15 @@ const projects = [
   },
   {
     id: 3,
-    title: "Medical Equipment Upgrade - Central Hospital",
-    description: "Comprehensive medical equipment installation and staff training for a 300-bed hospital facility.",
-    category: "Medical",
+    title: "Water Systems Upgrade - Central Utility Hub",
+    description: "Comprehensive water equipment installation and training for a major utility facility.",
+    category: "Water",
     location: "Istanbul, Turkey", 
     date: "2024",
     teamSize: "15 specialists",
-    image: "project-medical.jpg",
+    image: "project-water.jpg",
     highlights: [
-      "Installed 50+ pieces of advanced medical equipment",
+      "Installed 50+ advanced water management systems",
       "Provided comprehensive staff training",
       "Ensured full regulatory compliance",
       "24/7 support system implementation"

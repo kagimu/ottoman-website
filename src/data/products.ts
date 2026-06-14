@@ -2,6 +2,7 @@ export interface Product {
   id: string;
   name: string;
   category: ProductCategory;
+  subcategory: string;
   price: number;
   description: string;
   specifications: Record<string, string>;
@@ -12,7 +13,7 @@ export interface Product {
   model: string;
 }
 
-export type ProductCategory = 'agricultural' | 'beekeeping' | 'vocational' | 'medical' | 'promotional';
+export type ProductCategory = 'agricultural' | 'beekeeping' | 'vocational' | 'water';
 
 export const categories = [
   { 
@@ -34,17 +35,11 @@ export const categories = [
     icon: '🔧'
   },
   { 
-    id: 'medical', 
-    name: 'Medical Equipment', 
-    description: 'Advanced medical devices and healthcare solutions',
-    icon: '🏥'
+    id: 'water', 
+    name: 'Water Equipment', 
+    description: 'Advanced water systems and treatment solutions',
+    icon: '💧'
   },
-  { 
-    id: 'promotional', 
-    name: 'Promotional Items', 
-    description: 'Custom branded products and corporate promotional materials',
-    icon: '🎁'
-  }
 ] as const;
 
 // Agricultural Products (50+ items)
@@ -259,8 +254,8 @@ for (let i = 3; i <= 52; i++) {
 // For brevity, I'll create the basic structure and a few examples for each
 
 const vocationalProducts: Product[] = [];
-const medicalProducts: Product[] = [];
-const promotionalProducts: Product[] = [];
+const waterProducts: Product[] = [];
+// promotional products removed
 
 // Generate vocational products
 for (let i = 1; i <= 50; i++) {
@@ -294,31 +289,31 @@ for (let i = 1; i <= 50; i++) {
   });
 }
 
-// Generate medical products
+// Generate water products
 for (let i = 1; i <= 50; i++) {
   const productTypes = [
-    'Patient Monitor', 'Defibrillator', 'X-Ray Machine', 'Ultrasound Scanner', 'IV Pump',
-    'Surgical Light', 'Operating Table', 'Autoclave', 'Ventilator', 'ECG Machine'
+    'Water Pump', 'Filtration System', 'Water Treatment Unit', 'Irrigation Controller', 'Pressure Tank',
+    'Water Heater', 'Reverse Osmosis System', 'Sewage Pump', 'Submersible Pump', 'Water Meter'
   ];
-  const manufacturers = ['MediTech', 'HealthMax', 'BioMed Pro', 'MedDevice Inc', 'CareMax'];
+  const manufacturers = ['AquaFlow', 'HydroTech', 'PureWater Solutions', 'BlueWave Systems', 'EcoH2O'];
   
   const productType = productTypes[(i - 1) % productTypes.length];
   const manufacturer = manufacturers[(i - 1) % manufacturers.length];
   
-  medicalProducts.push({
-    id: `md-${i.toString().padStart(3, '0')}`,
+  waterProducts.push({
+    id: `wt-${i.toString().padStart(3, '0')}`,
     name: `${manufacturer} ${productType} ${Math.floor(Math.random() * 9000) + 1000}`,
-    category: 'medical',
-    price: Math.floor(Math.random() * 100000) + 10000,
-    description: `Advanced ${productType.toLowerCase()} for modern healthcare facilities.`,
+    category: 'water',
+    price: Math.floor(Math.random() * 100000) + 5000,
+    description: `Reliable ${productType.toLowerCase()} for efficient water management and distribution.`,
     specifications: {
-      'FDA Approved': 'Yes',
-      'Warranty': `${Math.floor(Math.random() * 3) + 2} years`,
+      'Warranty': `${Math.floor(Math.random() * 3) + 1} years`,
       'Power Supply': '220V AC',
-      'Certification': 'FDA, CE, ISO 13485',
+      'Certification': 'ISO 9001, CE',
+      'Material': 'Stainless Steel',
       'Service': '24/7 support available'
     },
-    images: ['https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800', 'https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800'],
+    images: ['https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800', 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800'],
     inStock: Math.random() > 0.15,
     featured: Math.random() > 0.8,
     manufacturer,
@@ -326,44 +321,11 @@ for (let i = 1; i <= 50; i++) {
   });
 }
 
-// Generate promotional products
-for (let i = 1; i <= 50; i++) {
-  const productTypes = [
-    'Custom Mug', 'Branded Pen', 'Logo T-Shirt', 'Promotional Bag', 'Business Card Holder',
-    'Desk Calendar', 'USB Drive', 'Stress Ball', 'Keychain', 'Notebook'
-  ];
-  const manufacturers = ['PromoMax', 'BrandCraft', 'CustomPro', 'PromotionalPlus', 'LogoMaster'];
-  
-  const productType = productTypes[(i - 1) % productTypes.length];
-  const manufacturer = manufacturers[(i - 1) % manufacturers.length];
-  
-  promotionalProducts.push({
-    id: `pm-${i.toString().padStart(3, '0')}`,
-    name: `${manufacturer} ${productType} ${Math.floor(Math.random() * 900) + 100}`,
-    category: 'promotional',
-    price: Math.floor(Math.random() * 500) + 10,
-    description: `High-quality ${productType.toLowerCase()} perfect for corporate branding and marketing.`,
-    specifications: {
-      'Customization': 'Logo printing available',
-      'Material': 'Premium quality',
-      'Min Order': `${Math.floor(Math.random() * 50) + 25} pieces`,
-      'Lead Time': `${Math.floor(Math.random() * 10) + 5} business days`,
-      'Colors': 'Multiple options'
-    },
-    images: ['https://images.unsplash.com/photo-1581090464777-f3220bbe1e8b?w=800', 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=800'],
-    inStock: true,
-    featured: Math.random() > 0.9,
-    manufacturer,
-    model: `${productType.replace(' ', '')}-${Math.floor(Math.random() * 900) + 100}`
-  });
-}
-
 export const allProducts: Product[] = [
   ...agriculturalProducts,
   ...beekeepingProducts,
   ...vocationalProducts,
-  ...medicalProducts,
-  ...promotionalProducts
+  ...waterProducts
 ];
 
 export const getProductsByCategory = (category: ProductCategory): Product[] => {
