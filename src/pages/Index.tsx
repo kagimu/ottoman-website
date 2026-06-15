@@ -26,14 +26,12 @@ import categoryAgricultural from '@/assets/category-agricultural.jpg';
 import categoryBeekeeping from '@/assets/category-beekeeping.jpg';
 import categoryVocational from '@/assets/category-vocational.jpg';
 import categoryWater from '@/assets/category-water.jpg';
-import categoryPromotional from '@/assets/category-promotional.jpg';
 
 const categoryImages = {
   agricultural: categoryAgricultural,
   beekeeping: categoryBeekeeping,
   vocational: categoryVocational,
   water: categoryWater,
-  promotional: categoryPromotional
 };
 
 // Hero slides with image, title, description
