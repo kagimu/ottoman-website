@@ -24,20 +24,15 @@ import { cn } from '@/lib/utils';
 import categoryAgricultural from '@/assets/category-agricultural.jpg';
 import categoryBeekeeping from '@/assets/category-beekeeping.jpg';
 import categoryVocational from '@/assets/category-vocational.jpg';
- HEAD
-import categoryWater from '@/assets/category-water.jpg';
+import categoryWater from '@/assets/is463940-pump-4784420.jpg';
 import categoryPromotional from '@/assets/category-promotional.jpg';
- 44b3ae9c536c63cbe68158a0b17d729bbd04a578
+
 
 const categoryImages = {
   agricultural: categoryAgricultural,
   beekeeping: categoryBeekeeping,
   vocational: categoryVocational,
-<<<<<<< HEAD
-  water: categoryWater
-=======
   water: categoryWater,
->>>>>>> 44b3ae9c536c63cbe68158a0b17d729bbd04a578
 };
 
 // Example subcategories data
@@ -46,10 +41,7 @@ const subcategoriesData: Record<ProductCategory, string[]> = {
   beekeeping: [],
   vocational: ['Welding', 'Carpentry', 'Plumbing', 'Electrical', 'Tailoring', 'Hairdressing'],
   water: [],
-<<<<<<< HEAD
-  promotional: []
-=======
->>>>>>> 44b3ae9c536c63cbe68158a0b17d729bbd04a578
+ 
 };
 
 export default function Marketplace() {

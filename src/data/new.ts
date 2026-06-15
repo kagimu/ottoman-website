@@ -1,7 +1,54 @@
-import type { Product, ProductCategory } from './products';
- export const categories =
-  [ { id: 'agricultural', name: 'Agricultural Tools & Equipment', description: 'Professional farming and agricultural machinery for enhanced productivity', icon: '🚜' }, { id: 'beekeeping', name: 'Beekeeping Equipment', description: 'Complete beekeeping solutions for honey production and hive management', icon: '🐝' }, { id: 'vocational', name: 'Vocational Items', description: 'Professional tools and equipment for various trades and vocations', icon: '🔧' }, { id: 'water', name: 'Water Equipment', description: 'Advanced water systems and treatment solutions', icon: '💧' }, { id: 'promotional', name: 'Promotional Items', description: 'Custom branded products and corporate promotional materials', icon: '🎁' } ] as const;
-const agriculturalProducts: Product[] =[
+export interface Product {
+  id: string;
+  name: string;
+  category: ProductCategory;
+  subcategory?: string;
+  price: number;
+  description: string;
+  specifications: Record<string, string>;
+  images: string[];
+  inStock: boolean;
+  featured: boolean;
+  manufacturer: string;
+  model: string;
+}
+
+export type ProductCategory = 'agricultural' | 'beekeeping' | 'vocational' | 'water' | 'promotional';
+
+export const categories = [
+  {
+    id: 'agricultural',
+    name: 'Agricultural Tools & Equipment',
+    description: 'Professional farming and agricultural machinery for enhanced productivity',
+    icon: '🚜'
+  },
+  {
+    id: 'beekeeping',
+    name: 'Beekeeping Equipment',
+    description: 'Complete beekeeping solutions for honey production and hive management',
+    icon: '🐝'
+  },
+  {
+    id: 'vocational',
+    name: 'Vocational Items',
+    description: 'Professional tools and equipment for various trades and vocations',
+    icon: '🔧'
+  },
+  {
+    id: 'water',
+    name: 'Water Equipment',
+    description: 'Advanced water systems and treatment solutions',
+    icon: '💧'
+  },
+  {
+    id: 'promotional',
+    name: 'Promotional Items',
+    description: 'Custom branded products and corporate promotional materials',
+    icon: '🎁'
+  }
+] as const;
+
+const agriculturalProducts: Product[] = [
   {
     "id": "1",
     "name": "Hand Hoe",
@@ -58,7 +105,7 @@ const agriculturalProducts: Product[] =[
     "name": "Water Pump",
     "specifications": {
       "Engine": "5.5HP Petrol Engine",
-      "FlowRate": "30,000 L/hr"
+      "Flow Rate": "30,000 L/hr"
     },
     "price": 850000,
     "category": "agricultural",
@@ -74,7 +121,7 @@ const agriculturalProducts: Product[] =[
     "id": "5",
     "name": "Tractor",
     "specifications": {
-      "HorsePower": "75 HP",
+      "Horsepower": "75 HP",
       "Transmission": "4WD",
       "Fuel": "Diesel"
     },
@@ -92,8 +139,8 @@ const agriculturalProducts: Product[] =[
     "id": "6",
     "name": "Rotary Tiller",
     "specifications": {
-      "WorkingWidth": "1.8 Meters",
-      "PowerSource": "Tractor PTO"
+      "Working Width": "1.8 Meters",
+      "Power Source": "Tractor PTO"
     },
     "price": 3500000,
     "category": "agricultural",
@@ -122,9 +169,41 @@ const agriculturalProducts: Product[] =[
     "featured": false,
     "images": ["https://i.imghippo.com/files/SYH3394qZA.jpg"]
   }
-]
+];
 
-    // ---------------------- Beekeeping Products ----------------------
+{
+  const productTypes = [
+    'Fertilizer Spreader', 'Disc Harrow', 'Hay Baler', 'Mower', 'Plow', 'Tedder',
+    'Rake', 'Seeder', 'Sprayer', 'Trailer', 'Manure Spreader', 'Chisel Plow'
+  ];
+  const manufacturers = ['AgriTech', 'FarmMaster', 'CropPro', 'FieldKing', 'AgroMax'];
+
+  for (let i = 8; i <= 55; i++) {
+    const productType = productTypes[(i - 8) % productTypes.length];
+    const manufacturer = manufacturers[(i - 8) % manufacturers.length];
+
+    agriculturalProducts.push({
+      id: `ag-${i.toString().padStart(3, '0')}`,
+      name: `${manufacturer} ${productType} ${Math.floor(Math.random() * 9000) + 1000}`,
+      category: 'agricultural',
+      price: Math.floor(Math.random() * 50000) + 5000,
+      description: `Professional ${productType.toLowerCase()} designed for efficient agricultural operations.`,
+      specifications: {
+        'Model Year': '2024',
+        'Warranty': `${Math.floor(Math.random() * 3) + 2} years`,
+        'Power Requirement': `${Math.floor(Math.random() * 200) + 50} HP`,
+        'Weight': `${Math.floor(Math.random() * 5000) + 1000} kg`,
+        'Certification': 'CE, ISO 9001'
+      },
+      images: ['https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800'],
+      inStock: Math.random() > 0.1,
+      featured: Math.random() > 0.8,
+      manufacturer,
+      model: `${productType.replace(' ', '')}-${Math.floor(Math.random() * 9000) + 1000}`
+    });
+  }
+}
+
 const beekeepingProducts: Product[] = [
   {
     "id": "B2",
@@ -235,7 +314,7 @@ const beekeepingProducts: Product[] = [
     "description": "High-capacity honey extractor with 20-frame capacity and stands.",
     "specifications": {
       "Material": "Steel",
-      "FrameCapacity": "20 Frames"
+      "Frame Capacity": "20 Frames"
     },
     "images": ["https://i.imghippo.com/files/ekWw7878RpU.jpg"],
     "inStock": true,
@@ -275,10 +354,41 @@ const beekeepingProducts: Product[] = [
     "manufacturer": "Ottoman Enterprise",
     "model": "NS-001"
   }
-  
 ];
 
-// ---------------------- Vocational Products ----------------------
+{
+  const productTypes = [
+    'Smoker', 'Hive Tool', 'Honey Extractor', 'Uncapping Knife', 'Queen Excluder',
+    'Feeder', 'Bee Brush', 'Frame Puller', 'Honey Tank', 'Wax Melter'
+  ];
+  const manufacturers = ['BeeMax', 'HoneyPro', 'HiveTech', 'BeeKeeper Supply', 'ApiMax'];
+
+  for (let i = 12; i <= 52; i++) {
+    const productType = productTypes[(i - 12) % productTypes.length];
+    const manufacturer = manufacturers[(i - 12) % manufacturers.length];
+
+    beekeepingProducts.push({
+      id: `bk-${i.toString().padStart(3, '0')}`,
+      name: `${manufacturer} ${productType} ${Math.floor(Math.random() * 900) + 100}`,
+      category: 'beekeeping',
+      price: Math.floor(Math.random() * 800) + 50,
+      description: `Professional ${productType.toLowerCase()} for efficient beekeeping operations.`,
+      specifications: {
+        'Material': 'Stainless steel',
+        'Warranty': `${Math.floor(Math.random() * 2) + 1} year`,
+        'Certification': 'Food grade',
+        'Origin': 'EU manufactured',
+        'Weight': `${Math.floor(Math.random() * 5) + 0.5} kg`
+      },
+      images: ['https://images.unsplash.com/photo-1498936178812-4b2e558d2937?w=800'],
+      inStock: Math.random() > 0.05,
+      featured: Math.random() > 0.85,
+      manufacturer,
+      model: `${productType.replace(' ', '')}-${Math.floor(Math.random() * 900) + 100}`
+    });
+  }
+}
+
 const vocationalProducts: Product[] = [
   {
     "id": "5",
@@ -288,9 +398,9 @@ const vocationalProducts: Product[] = [
     "price": 120000,
     "description": "Hard plastic hair washing sink with metallic stand, Italian made.",
     "specifications": {
-      "material": "Hard plastic",
-      "stand": "Metallic",
-      "origin": "Italy"
+      "Material": "Hard plastic",
+      "Stand": "Metallic",
+      "Origin": "Italy"
     },
     "images": [],
     "inStock": true,
@@ -306,8 +416,8 @@ const vocationalProducts: Product[] = [
     "price": 400000,
     "description": "Manual sewing machine with original metallic stand, suitable for tailoring training.",
     "specifications": {
-      "brand": "Singer or Equivalent",
-      "stand": "Metallic"
+      "Brand": "Singer or Equivalent",
+      "Stand": "Metallic"
     },
     "images": [],
     "inStock": true,
@@ -323,8 +433,8 @@ const vocationalProducts: Product[] = [
     "price": 750000,
     "description": "Heavy-duty leather sewing machine for industrial tailoring.",
     "specifications": {
-      "brand": "Higlead or Equivalent",
-      "use": "Leather stitching"
+      "Brand": "Higlead or Equivalent",
+      "Use": "Leather stitching"
     },
     "images": [],
     "inStock": true,
@@ -340,8 +450,8 @@ const vocationalProducts: Product[] = [
     "price": 500000,
     "description": "Palie Brother KH871 knitting machine for fabric creation and tailoring.",
     "specifications": {
-      "brand": "Palie Brother",
-      "model": "KH871"
+      "Brand": "Palie Brother",
+      "Model": "KH871"
     },
     "images": [],
     "inStock": true,
@@ -357,8 +467,8 @@ const vocationalProducts: Product[] = [
     "price": 1700000,
     "description": "Heavy-duty overlock machine for professional tailoring and garment finishing.",
     "specifications": {
-      "type": "Industrial",
-      "capacity": "High"
+      "Type": "Industrial",
+      "Capacity": "High"
     },
     "images": [],
     "inStock": true,
@@ -374,8 +484,8 @@ const vocationalProducts: Product[] = [
     "price": 18000000,
     "description": "15-needle single embroidery machine for advanced tailoring and embroidery work.",
     "specifications": {
-      "needles": "15",
-      "type": "Single head"
+      "Needles": "15",
+      "Type": "Single head"
     },
     "images": [],
     "inStock": true,
@@ -385,8 +495,74 @@ const vocationalProducts: Product[] = [
   }
 ];
 
+{
+  const productTypes = [
+    'Power Drill', 'Angle Grinder', 'Circular Saw', 'Welding Machine', 'Safety Helmet',
+    'Work Gloves', 'Tool Box', 'Measuring Tape', 'Level', 'Socket Set'
+  ];
+  const manufacturers = ['ProTool', 'WorkMaster', 'IndustrialMax', 'TradePro', 'CraftTech'];
 
-// ---------------------- Promotional Products ----------------------
+  for (let i = 11; i <= 50; i++) {
+    const productType = productTypes[(i - 11) % productTypes.length];
+    const manufacturer = manufacturers[(i - 11) % manufacturers.length];
+
+    vocationalProducts.push({
+      id: `vc-${i.toString().padStart(3, '0')}`,
+      name: `${manufacturer} ${productType} ${Math.floor(Math.random() * 9000) + 1000}`,
+      category: 'vocational',
+      price: Math.floor(Math.random() * 2000) + 100,
+      description: `Professional-grade ${productType.toLowerCase()} for demanding work environments.`,
+      specifications: {
+        'Power Rating': `${Math.floor(Math.random() * 2000) + 500}W`,
+        'Warranty': `${Math.floor(Math.random() * 3) + 1} years`,
+        'Safety Rating': 'IP65',
+        'Material': 'Industrial grade',
+        'Certification': 'CE, UL Listed'
+      },
+      images: ['https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800', 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800'],
+      inStock: Math.random() > 0.1,
+      featured: Math.random() > 0.85,
+      manufacturer,
+      model: `${productType.replace(' ', '')}-${Math.floor(Math.random() * 9000) + 1000}`
+    });
+  }
+}
+
+const waterProducts: Product[] = [];
+
+{
+  const productTypes = [
+    'Water Pump', 'Filtration System', 'Water Treatment Unit', 'Irrigation Controller', 'Pressure Tank',
+    'Water Heater', 'Reverse Osmosis System', 'Sewage Pump', 'Submersible Pump', 'Water Meter'
+  ];
+  const manufacturers = ['AquaFlow', 'HydroTech', 'PureWater Solutions', 'BlueWave Systems', 'EcoH2O'];
+
+  for (let i = 1; i <= 50; i++) {
+    const productType = productTypes[(i - 1) % productTypes.length];
+    const manufacturer = manufacturers[(i - 1) % manufacturers.length];
+
+    waterProducts.push({
+      id: `wt-${i.toString().padStart(3, '0')}`,
+      name: `${manufacturer} ${productType} ${Math.floor(Math.random() * 9000) + 1000}`,
+      category: 'water',
+      price: Math.floor(Math.random() * 100000) + 5000,
+      description: `Reliable ${productType.toLowerCase()} for efficient water management and distribution.`,
+      specifications: {
+        'Warranty': `${Math.floor(Math.random() * 3) + 1} years`,
+        'Power Supply': '220V AC',
+        'Certification': 'ISO 9001, CE',
+        'Material': 'Stainless Steel',
+        'Service': '24/7 support available'
+      },
+      images: ['https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800', 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800'],
+      inStock: Math.random() > 0.15,
+      featured: Math.random() > 0.8,
+      manufacturer,
+      model: `${productType.replace(' ', '')}-${Math.floor(Math.random() * 9000) + 1000}`
+    });
+  }
+}
+
 const promotionalProducts: Product[] = [
   {
     id: "37",
@@ -418,7 +594,6 @@ const promotionalProducts: Product[] = [
   }
 ];
 
-// ---------------------- Export All Products ----------------------
 export const allProducts: Product[] = [
   ...agriculturalProducts,
   ...beekeepingProducts,
@@ -438,109 +613,3 @@ export const getFeaturedProducts = (): Product[] => {
 export const getProductById = (id: string): Product | undefined => {
   return allProducts.find(product => product.id === id);
 };
-
-
-const projects = [
-  {
-    id: 1,
-    title: "Modernization of Al-Rashid Agricultural Complex",
-    description: "Complete overhaul of irrigation systems and equipment modernization for a 500-hectare agricultural facility.",
-    category: "Agricultural",
-    location: "Antalya, Turkey",
-    date: "2024",
-    teamSize: "12 specialists",
-    image: "agricultural-tractor.jpg",
-    highlights: [
-      "Installed 15 ProField Tractor 2000X units",
-      "Deployed smart irrigation covering 500 hectares", 
-      "Increased crop yield by 35%",
-      "Reduced water consumption by 25%"
-    ],
-    status: "Completed"
-  },
-  {
-    id: 2,
-    title: "Honey Production Facility Setup",
-    description: "Establishment of a modern honey production facility with complete beekeeping equipment installation.",
-    category: "Beekeeping",
-    location: "Izmir, Turkey",
-    date: "2024",
-    teamSize: "8 specialists",
-    image: "beekeeping-hive.jpg",
-    highlights: [
-      "Set up 200 BeeMax Langstroth hive systems",
-      "Installed professional honey extraction facility",
-      "Trained 25 beekeepers on modern techniques",
-      "Achieved 40% increase in honey production"
-    ],
-    status: "Completed"
-  },
-  {
-    id: 3,
-    title: "Water Systems Upgrade - Central Utility Hub",
-    description: "Comprehensive water equipment installation and training for a major utility facility.",
-    category: "Water",
-    location: "Istanbul, Turkey", 
-    date: "2024",
-    teamSize: "15 specialists",
-    image: "project-water.jpg",
-    highlights: [
-      "Installed 50+ advanced water management systems",
-      "Provided comprehensive staff training",
-      "Ensured full regulatory compliance",
-      "24/7 support system implementation"
-    ],
-    status: "In Progress"
-  },
-  {
-    id: 4,
-    title: "Industrial Workshop Equipment Installation",
-    description: "Complete vocational workshop setup for a technical training institute with modern equipment.",
-    category: "Vocational",
-    location: "Bursa, Turkey",
-    date: "2023",
-    teamSize: "10 specialists", 
-    image: "vocational-tools.jpg",
-    highlights: [
-      "Equipped 8 specialized workshops",
-      "Installed 200+ professional tools",
-      "Trained 50 instructors",
-      "Enhanced student learning outcomes by 60%"
-    ],
-    status: "Completed"
-  },
-  {
-    id: 5,
-    title: "Corporate Branding Initiative",
-    description: "Large-scale promotional items production and distribution for a multinational corporation.",
-    category: "Promotional", 
-    location: "Ankara, Turkey",
-    date: "2023",
-    teamSize: "6 specialists",
-    image: "promotional-items.jpg",
-    highlights: [
-      "Produced 50,000+ branded items",
-      "Delivered to 25 international offices",
-      "Achieved 95% client satisfaction",
-      "Completed 2 weeks ahead of schedule"
-    ],
-    status: "Completed"
-  },
-  {
-    id: 6,
-    title: "Smart Farm Technology Integration",
-    description: "Implementation of IoT-enabled agricultural equipment for precision farming operations.",
-    category: "Agricultural",
-    location: "Konya, Turkey",
-    date: "2023", 
-    teamSize: "14 specialists",
-    image: "project-tech.jpg",
-    highlights: [
-      "Integrated IoT sensors across 300 hectares",
-      "Deployed autonomous farming equipment",
-      "Reduced operational costs by 30%",
-      "Implemented predictive maintenance system"
-    ],
-    status: "Completed"
-  }
-];

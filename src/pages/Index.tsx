@@ -86,12 +86,6 @@ const heroSlides = [
     description:
       'Tools designed to make your garden flourish effortlessly.',
   },
-  {
-    image: heroSlide9,
-    title: 'Promotional Products',
-    description:
-      'Custom branded items to boost your brand visibility.',
-  },
 ];
 
 const Index = () => {
