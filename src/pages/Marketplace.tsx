@@ -32,7 +32,7 @@ const categoryImages = {
   agricultural: categoryAgricultural,
   beekeeping: categoryBeekeeping,
   vocational: categoryVocational,
-  water: categoryMedical,
+  water: categoryWater,
 };
 
 // Example subcategories data
