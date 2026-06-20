@@ -16,7 +16,7 @@ import heroSlide2 from '@/assets/hero-slide-2.jpg';
 import heroSlide3 from '@/assets/hero-slide-3.jpg';
 import heroSlide4 from '@/assets/beekeeper-working-bee-farm.jpg';
 import heroSlide5 from '@/assets/pexels-pavel-danilyuk-6461131.jpg';
-import heroSlide6 from '@/assets/pexels-pixabay-236380.jpg';
+import heroSlide6 from '@/assets/water-pump.jpg';
 import heroSlide7 from '@/assets/pexels-avinash-singh-261980-921719.jpg';
 import heroSlide8 from '@/assets/close-up-picture-garden-equipment-put-soil.jpg';
 import heroSlide9 from '@/assets/14974.jpg';
@@ -25,7 +25,7 @@ import heroSlide9 from '@/assets/14974.jpg';
 import categoryAgricultural from '@/assets/category-agricultural.jpg';
 import categoryBeekeeping from '@/assets/category-beekeeping.jpg';
 import categoryVocational from '@/assets/category-vocational.jpg';
-import categoryWater from '@/assets/category-water.jpg';
+import categoryWater from '@/assets/water-pump.jpg';
 
 const categoryImages = {
   agricultural: categoryAgricultural,
@@ -95,7 +95,7 @@ const Index = () => {
 
   // Animated counters
   const productsCounter = useCounterAnimation({ end: 250, duration: 2000 });
-  const projectsCounter = useCounterAnimation({ end: 20, duration: 2000 });
+  const projectsCounter = useCounterAnimation({ end: 21, duration: 2000 });
   const satisfactionCounter = useCounterAnimation({ end: 98, duration: 2000 });
   const experienceCounter = useCounterAnimation({ end: 15, duration: 2000 });
 
@@ -291,6 +291,7 @@ const Index = () => {
                       alt={category.name}
                       className="w-full h-full object-cover transition-transform duration-500"
                     />
+                  
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-center justify-center">
                       <div className="text-center text-white transform transition-transform duration-300 hover:scale-110">
                         <div className="text-4xl mb-2 animate-pulse-glow">

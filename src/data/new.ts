@@ -13,7 +13,7 @@ export interface Product {
   model: string;
 }
 
-export type ProductCategory = 'agricultural' | 'beekeeping' | 'vocational' | 'water' | 'promotional';
+export type ProductCategory = 'agricultural' | 'beekeeping' | 'vocational' | 'water' ;
 
 export const categories = [
   {
@@ -40,12 +40,7 @@ export const categories = [
     description: 'Advanced water systems and treatment solutions',
     icon: '💧'
   },
-  {
-    id: 'promotional',
-    name: 'Promotional Items',
-    description: 'Custom branded products and corporate promotional materials',
-    icon: '🎁'
-  }
+  
 ] as const;
 
 const agriculturalProducts: Product[] = [

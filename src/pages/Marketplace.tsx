@@ -24,8 +24,7 @@ import { cn } from '@/lib/utils';
 import categoryAgricultural from '@/assets/category-agricultural.jpg';
 import categoryBeekeeping from '@/assets/category-beekeeping.jpg';
 import categoryVocational from '@/assets/category-vocational.jpg';
-import categoryWater from '@/assets/is463940-pump-4784420.jpg';
-import categoryPromotional from '@/assets/category-promotional.jpg';
+import categoryWater from '@/assets/water-pump.jpg';
 
 
 const categoryImages = {
