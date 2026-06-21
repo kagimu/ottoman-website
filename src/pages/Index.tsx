@@ -16,7 +16,7 @@ import heroSlide2 from '@/assets/hero-slide-2.jpg';
 import heroSlide3 from '@/assets/hero-slide-3.jpg';
 import heroSlide4 from '@/assets/beekeeper-working-bee-farm.jpg';
 import heroSlide5 from '@/assets/pexels-pixabay-236380.jpg';
-import heroSlide6 from '@/assets/water-pump.jpg';
+import heroSlide6 from '@/assets/medical-equipment.jpg';
 import heroSlide7 from '@/assets/pexels-avinash-singh-261980-921719.jpg';
 import heroSlide8 from '@/assets/close-up-picture-garden-equipment-put-soil.jpg';
 import heroSlide9 from '@/assets/14974.jpg';
@@ -25,13 +25,13 @@ import heroSlide9 from '@/assets/14974.jpg';
 import categoryAgricultural from '@/assets/category-agricultural.jpg';
 import categoryBeekeeping from '@/assets/category-beekeeping.jpg';
 import categoryVocational from '@/assets/category-vocational.jpg';
-import categoryWater from '@/assets/water-pump.jpg';
+import categorymedical from '@/assets/medical-equipment.jpg';
 
 const categoryImages = {
   agricultural: categoryAgricultural,
   beekeeping: categoryBeekeeping,
   vocational: categoryVocational,
-  water: categoryWater,
+  medical: categoryMedical,
 };
 
 // Hero slides with image, title, description
@@ -68,9 +68,9 @@ const heroSlides = [
   },
   {
     image: heroSlide6,
-    title: 'Water Equipment',
+    title: 'Medical Equipment',
     description:
-      'Top-notch solutions for water management and treatment.',
+      'High-quality medical equipment designed to support hospitals, clinics, pharmacies, and home healthcare needs',
   },
   {
     image: heroSlide7,

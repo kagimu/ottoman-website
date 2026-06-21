@@ -31,7 +31,7 @@ const categoryImages = {
   agricultural: categoryAgricultural,
   beekeeping: categoryBeekeeping,
   vocational: categoryVocational,
-  water: categoryWater,
+  medical: categoryMedical,
 };
 
 // Example subcategories data
@@ -39,7 +39,10 @@ const subcategoriesData: Record<ProductCategory, string[]> = {
   agricultural: ['Farm Tools','Irrigation Equipment','Farm Machinery'],
   beekeeping: [],
   vocational: ['Welding', 'Carpentry', 'Plumbing', 'Electrical', 'Tailoring', 'Hairdressing'],
-  water: [],
+  medical: ['Diagnostic Equipment	','Cardiology Equipment	','Respiratory Equipment	', 'Monitoring Equipment' , 'Emergency Equipment	'
+    , 'Defibrillation Equipment', 'Infusion Therapy Equipment	', 'Sterilization Equipment', 'Measurement Equipment'
+
+	],
  
 };
 

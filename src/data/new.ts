@@ -1030,7 +1030,7 @@ const vocationalProducts: Product[] = [
       price: Math.floor(Math.random() * 2000) + 100,
       description: `Professional-grade ${productType.toLowerCase()} for demanding work environments.`,
       specifications: {
-        'Power Rating': `${Math.floor(Math.random() * 2000) + 500}W`,
+        'Power Rating': `${Math.floor(Matgith.random() * 2000) + 500}W`,
         'Warranty': `${Math.floor(Math.random() * 3) + 1} years`,
         'Safety Rating': 'IP65',
         'Material': 'Industrial grade',
@@ -1046,12 +1046,11 @@ const vocationalProducts: Product[] = [
 }
 
 const medicalproducts: Product[] = [
-  {const medicalproducts: Product[] = [
   {
     id: "md-001",
     name: "Digital Blood Pressure Monitor",
-    category: "diagnostic",
-    subcategory: "Monitoring Devices",
+    category: "medical",
+    subcategory: "diagnostic",
     price: 85000,
     description: "Automatic blood pressure monitor for accurate home and clinical use.",
     specifications: {
@@ -1068,8 +1067,8 @@ const medicalproducts: Product[] = [
   {
     id: "md-002",
     name: "Pulse Oximeter",
-    category: "diagnostic",
-    subcategory: "Monitoring Devices",
+    category: "medical",
+    subcategory: "diagnostic",
     price: 45000,
     description: "Finger pulse oximeter for measuring blood oxygen saturation and pulse rate.",
     specifications: {
@@ -1086,8 +1085,8 @@ const medicalproducts: Product[] = [
   {
     id: "md-003",
     name: "Infrared Thermometer",
-    category: "diagnostic",
-    subcategory: "Temperature Devices",
+    category: "medical",
+    subcategory: "diagnostic",
     price: 35000,
     description: "Non-contact infrared thermometer for quick temperature readings.",
     specifications: {
@@ -1104,8 +1103,8 @@ const medicalproducts: Product[] = [
   {
     id: "md-004",
     name: "Nebulizer Machine",
-    category: "respiratory",
-    subcategory: "Therapy Equipment",
+    category: "medical",
+    subcategory: "respiratory",
     price: 120000,
     description: "Portable nebulizer for respiratory therapy.",
     specifications: {
@@ -1122,8 +1121,8 @@ const medicalproducts: Product[] = [
   {
     id: "md-005",
     name: "Glucometer",
-    category: "diagnostic",
-    subcategory: "Blood Sugar Monitoring",
+    category: "medical",
+    subcategory: "diagnostic",
     price: 60000,
     description: "Blood glucose meter for diabetic monitoring.",
     specifications: {
@@ -1140,8 +1139,8 @@ const medicalproducts: Product[] = [
   {
     id: "md-006",
     name: "Digital Weighing Scale",
-    category: "fitness",
-    subcategory: "Measurement Equipment",
+    category: "medical",
+    subcategory: "fitness",
     price: 50000,
     description: "Electronic weighing scale for body weight monitoring.",
     specifications: {
@@ -1158,8 +1157,8 @@ const medicalproducts: Product[] = [
   {
     id: "md-007",
     name: "Stethoscope",
-    category: "diagnostic",
-    subcategory: "Medical Instruments",
+    category: "medical",
+    subcategory: "diagnostic",
     price: 40000,
     description: "Professional acoustic stethoscope for medical examinations.",
     specifications: {
@@ -1175,8 +1174,8 @@ const medicalproducts: Product[] = [
   {
     id: "md-008",
     name: "Wheelchair",
-    category: "mobility",
-    subcategory: "Patient Mobility",
+    category: "medical",
+    subcategory: "mobility",
     price: 450000,
     description: "Foldable wheelchair with comfortable seating.",
     specifications: {
@@ -1192,8 +1191,8 @@ const medicalproducts: Product[] = [
   {
     id: "md-009",
     name: "Walking Frame",
-    category: "mobility",
-    subcategory: "Patient Support",
+    category: "medical",
+    subcategory: "mobility",
     price: 150000,
     description: "Aluminum walking frame for elderly support.",
     specifications: {
@@ -1209,8 +1208,8 @@ const medicalproducts: Product[] = [
   {
     id: "md-010",
     name: "Crutches",
-    category: "mobility",
-    subcategory: "Patient Support",
+    category: "medical",
+    subcategory: "mobility",
     price: 80000,
     description: "Adjustable aluminum crutches for mobility assistance.",
     specifications: {
@@ -1226,8 +1225,8 @@ const medicalproducts: Product[] = [
   {
     id: "md-011",
     name: "Examination Bed",
-    category: "hospital",
-    subcategory: "Furniture",
+    category: "medical",
+    subcategory: "hospital",
     price: 650000,
     description: "Comfortable examination couch for clinics and hospitals.",
     specifications: {
@@ -1243,8 +1242,8 @@ const medicalproducts: Product[] = [
   {
     id: "md-012",
     name: "Oxygen Concentrator",
-    category: "respiratory",
-    subcategory: "Therapy Equipment",
+    category: "medical",
+    subcategory: "respiratory",
     price: 1200000,
     description: "Medical oxygen concentrator for home and hospital use.",
     specifications: {
@@ -1260,8 +1259,8 @@ const medicalproducts: Product[] = [
   {
     id: "md-013",
     name: "Suction Machine",
-    category: "hospital",
-    subcategory: "Emergency Equipment",
+    category: "medical",
+    subcategory: "hospital",
     price: 500000,
     description: "Portable suction machine for airway clearance.",
     specifications: {
@@ -1277,8 +1276,8 @@ const medicalproducts: Product[] = [
   {
     id: "md-014",
     name: "ECG Machine",
-    category: "cardiology",
-    subcategory: "Diagnostic Equipment",
+    category: "medical",
+    subcategory: "cardiology",
     price: 2500000,
     description: "12-channel ECG machine for heart monitoring.",
     specifications: {
@@ -1294,8 +1293,8 @@ const medicalproducts: Product[] = [
   {
     id: "md-015",
     name: "Hospital Bed",
-    category: "hospital",
-    subcategory: "Furniture",
+    category: "medical",
+    subcategory: "hospital",
     price: 1800000,
     description: "Adjustable hospital bed with side rails.",
     specifications: {
@@ -1311,8 +1310,8 @@ const medicalproducts: Product[] = [
   {
     id: "md-016",
     name: "Patient Monitor",
-    category: "monitoring",
-    subcategory: "Critical Care",
+    category: "medical",
+    subcategory: "monitoring",
     price: 3500000,
     description: "Multiparameter patient monitor for ICU and emergency care.",
     specifications: {
@@ -1322,17 +1321,16 @@ const medicalproducts: Product[] = [
     images: ["https://images.unsplash.com/photo-1581595219315-a187dd40c322?w=800"],
     inStock: true,
     featured: true,
-    manufacturer: "LifeCare
+    manufacturer: "LifeCare",
   },
- 
+]; 
 
 
 export const allProducts: Product[] = [
   ...agriculturalProducts,
   ...beekeepingProducts,
   ...vocationalProducts,
-  ...waterProducts,
-  ...promotionalProducts
+  ...medicalProducts,
 ];
 
 export const getProductsByCategory = (category: ProductCategory): Product[] => {

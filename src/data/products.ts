@@ -13,7 +13,7 @@ export interface Product {
   model: string;
 }
 
-export type ProductCategory = 'agricultural' | 'beekeeping' | 'vocational' | 'water' | 'promotional';
+export type ProductCategory = 'agricultural' | 'beekeeping' | 'vocational' | 'medical';
 
 export const categories = [
   { 
@@ -34,12 +34,12 @@ export const categories = [
     description: 'Professional tools and equipment for various trades and vocations',
     icon: '🔧'
   },
-  { 
-    id: 'water', 
-    name: 'Water Equipment', 
-    description: 'Advanced water systems and treatment solutions',
-    icon: '💧'
-  },
+  {
+  id: 'medical',
+  name: 'Medical Equipment',
+  description: 'High-quality diagnostic, monitoring, and patient care solutions',
+  icon: '🏥'
+},
 ] as const;
 
 // Agricultural Products (50+ items)
