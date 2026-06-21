@@ -13,7 +13,7 @@ export interface Product {
   model: string;
 }
 
-export type ProductCategory = 'agricultural' | 'beekeeping' | 'vocational' | 'water' ;
+export type ProductCategory = 'agricultural' | 'beekeeping' | 'vocational' | 'water' | 'promotional';
 
 export const categories = [
   {
@@ -163,6 +163,356 @@ const agriculturalProducts: Product[] = [
     "inStock": true,
     "featured": false,
     "images": ["https://i.imghippo.com/files/SYH3394qZA.jpg"]
+  },
+  {
+    "id": "ag-021",
+    "name": "Knapsack Sprayer",
+    "category": "agricultural",
+    "subcategory": "Sprayers",
+    "price": 70000,
+    "description": "20-litre manual knapsack sprayer for pesticides and foliar feeds.",
+    "specifications": {
+      "Capacity": "20 litres",
+      "Type": "Manual knapsack",
+      "Material": "Durable polyethylene"
+    },
+    "images": ["https://images.unsplash.com/photo-1524594157360-61597f2d90b5?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "Ottoman Enterprise",
+    "model": "KS-20"
+  },
+  {
+    "id": "ag-022",
+    "name": "Motorized Knapsack",
+    "category": "agricultural",
+    "subcategory": "Sprayers",
+    "price": 580000,
+    "description": "Motorized knapsack sprayer for fast, efficient field spraying.",
+    "specifications": {
+      "Type": "Motorized",
+      "Capacity": "20 litres",
+      "Power": "2-stroke engine"
+    },
+    "images": ["https://images.unsplash.com/photo-1592331514812-7a0a4576121d?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "Ottoman Enterprise",
+    "model": "MK-100"
+  },
+  {
+    "id": "ag-023",
+    "name": "Victor Zeb Fungicide",
+    "category": "agricultural",
+    "subcategory": "Crop Protection",
+    "price": 45000,
+    "description": "1kg fungicide powder for broad-spectrum crop disease control.",
+    "specifications": {
+      "Weight": "1 kg",
+      "Use": "Fungicide",
+      "Pack Size": "1 Kg"
+    },
+    "images": ["https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "Victor Agro",
+    "model": "VZ-1000"
+  },
+  {
+    "id": "ag-024",
+    "name": "Optimizer 40%",
+    "category": "agricultural",
+    "subcategory": "Crop Nutrition",
+    "price": 40000,
+    "description": "Liquid nutrient optimizer formulated at 40% concentration for improved plant performance.",
+    "specifications": {
+      "Concentration": "40%",
+      "Volume": "1 litre",
+      "Application": "Foliar feed"
+    },
+    "images": ["https://images.unsplash.com/photo-1518933165971-611dbc9c412d?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "Optimizer Agro",
+    "model": "OPT-40"
+  },
+  {
+    "id": "ag-025",
+    "name": "Dudu Accelamectin Insecticide",
+    "category": "agricultural",
+    "subcategory": "Crop Protection",
+    "price": 35000,
+    "description": "10-litre insecticide for crop pest control, suitable for vegetables and cash crops.",
+    "specifications": {
+      "Volume": "10 litres",
+      "Type": "Insecticide",
+      "Active Ingredient": "Accelamectin"
+    },
+    "images": ["https://images.unsplash.com/photo-1498842812179-c81beecf902c?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "Dudu Agro",
+    "model": "DA-10L"
+  },
+  {
+    "id": "ag-026",
+    "name": "Dudu Alpha 500ml",
+    "category": "agricultural",
+    "subcategory": "Crop Protection",
+    "price": 30000,
+    "description": "500ml insecticide concentrate for targeted pest management.",
+    "specifications": {
+      "Volume": "500 ml",
+      "Pack Type": "Bottle",
+      "Use": "Insecticide"
+    },
+    "images": ["https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "Dudu Agro",
+    "model": "DA-500"
+  },
+  {
+    "id": "ag-027",
+    "name": "Striker 1 Litre",
+    "category": "agricultural",
+    "subcategory": "Crop Protection",
+    "price": 45000,
+    "description": "1 litre crop protection solution for effective weed and pest control.",
+    "specifications": {
+      "Volume": "1 litre",
+      "Type": "Herbicide/ insecticide",
+      "Application": "Foliar spray"
+    },
+    "images": ["https://images.unsplash.com/photo-1511174511562-5f7f18b0a602?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "Striker Agro",
+    "model": "STR-1L"
+  },
+  {
+    "id": "ag-028",
+    "name": "Rodomic Fungicide",
+    "category": "agricultural",
+    "subcategory": "Crop Protection",
+    "price": 80000,
+    "description": "1kg fungicide for disease prevention in cereals and vegetables.",
+    "specifications": {
+      "Weight": "1 kg",
+      "Use": "Fungicide",
+      "Packaging": "Powder"
+    },
+    "images": ["https://images.unsplash.com/photo-1518770660439-4636190af475?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "Rodomic",
+    "model": "RD-1000"
+  },
+  {
+    "id": "ag-029",
+    "name": "Mancozeb 1kg",
+    "category": "agricultural",
+    "subcategory": "Crop Protection",
+    "price": 26000,
+    "description": "1kg mancozeb fungicide for crop disease control.",
+    "specifications": {
+      "Weight": "1 kg",
+      "Active Ingredient": "Mancozeb",
+      "Application": "Foliar spray"
+    },
+    "images": ["https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "AgroChem",
+    "model": "MAN-1KG"
+  },
+  {
+    "id": "ag-030",
+    "name": "UREA Fertilizer 50Kg",
+    "category": "agricultural",
+    "subcategory": "Fertilizers",
+    "price": 125000,
+    "description": "50kg bag of urea fertilizer for high-nitrogen crop nutrition.",
+    "specifications": {
+      "Weight": "50 kg",
+      "Nutrient": "Nitrogen 46%"
+    },
+    "images": ["https://images.unsplash.com/photo-1473168124609-2fb82ef1c5cf?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "AgroFert",
+    "model": "UREA-50"
+  },
+  {
+    "id": "ag-031",
+    "name": "CAN Fertilizer 50Kg",
+    "category": "agricultural",
+    "subcategory": "Fertilizers",
+    "price": 120000,
+    "description": "50kg bag of calcium ammonium nitrate fertilizer for balanced crop development.",
+    "specifications": {
+      "Weight": "50 kg",
+      "Nutrient": "Nitrogen 27%, Calcium 10%"
+    },
+    "images": ["https://images.unsplash.com/photo-1518732714860-b62714ce0c1c?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "AgroFert",
+    "model": "CAN-50"
+  },
+  {
+    "id": "ag-032",
+    "name": "NPK Fertilizer 50Kg",
+    "category": "agricultural",
+    "subcategory": "Fertilizers",
+    "price": 125000,
+    "description": "50kg bag of NPK fertilizer for all-round crop nutrition.",
+    "specifications": {
+      "Weight": "50 kg",
+      "Nutrient": "NPK blend"
+    },
+    "images": ["https://images.unsplash.com/photo-1485960994840-902a67c57f46?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "AgroFert",
+    "model": "NPK-50"
+  },
+  {
+    "id": "ag-033",
+    "name": "Hand Hoe 3LB",
+    "category": "agricultural",
+    "subcategory": "Farm Tools",
+    "price": 14000,
+    "description": "3LB cock brand hand hoe for weeding and soil preparation.",
+    "specifications": {
+      "Weight": "3 LB",
+      "Handle": "Wooden",
+      "Blade Material": "Forged steel"
+    },
+    "images": ["https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "Cock Brand",
+    "model": "HH-3LB"
+  },
+  {
+    "id": "ag-034",
+    "name": "Slasher",
+    "category": "agricultural",
+    "subcategory": "Farm Tools",
+    "price": 8000,
+    "description": "Wooden-handle slasher for clearing vegetation and harvesting.",
+    "specifications": {
+      "Handle": "Wooden",
+      "Blade Length": "18 inches"
+    },
+    "images": ["https://images.unsplash.com/photo-1494526585095-c41746248156?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "Field Tools",
+    "model": "SL-001"
+  },
+  {
+    "id": "ag-035",
+    "name": "Panga",
+    "category": "agricultural",
+    "subcategory": "Farm Tools",
+    "price": 7000,
+    "description": "Wooden-handle panga for cutting brush and clearing fields.",
+    "specifications": {
+      "Handle": "Wooden",
+      "Blade Length": "16 inches"
+    },
+    "images": ["https://images.unsplash.com/photo-1585060691685-26b0a6d7a3f4?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "Field Tools",
+    "model": "PG-001"
+  },
+  {
+    "id": "ag-036",
+    "name": "Diamond Axe",
+    "category": "agricultural",
+    "subcategory": "Farm Tools",
+    "price": 30000,
+    "description": "Diamond-brand axe for heavy chopping and farm use.",
+    "specifications": {
+      "Blade": "Forged steel",
+      "Handle": "Hardwood"
+    },
+    "images": ["https://images.unsplash.com/photo-1515548219893-9918f89a8f38?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "Diamond",
+    "model": "AX-001"
+  },
+  {
+    "id": "ag-037",
+    "name": "Rake",
+    "category": "agricultural",
+    "subcategory": "Farm Tools",
+    "price": 15000,
+    "description": "Metallic-handle rake for collecting debris and leveling soil.",
+    "specifications": {
+      "Handle": "Metallic",
+      "Tines": "Steel"
+    },
+    "images": ["https://images.unsplash.com/photo-1523895665938-35dbcc24f321?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "Field Tools",
+    "model": "RK-001"
+  },
+  {
+    "id": "ag-038",
+    "name": "Wheel Barrow",
+    "category": "agricultural",
+    "subcategory": "Farm Tools",
+    "price": 120000,
+    "description": "Reliance wheel barrow ideal for moving soil, produce, and materials.",
+    "specifications": {
+      "Capacity": "100 Liters",
+      "Material": "Steel frame"
+    },
+    "images": ["https://images.unsplash.com/photo-1519974719765-e6559eac2575?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "Reliance",
+    "model": "WB-100"
+  },
+  {
+    "id": "ag-039",
+    "name": "Gumboots",
+    "category": "agricultural",
+    "subcategory": "Protective Gear",
+    "price": 70000,
+    "description": "Heavy-duty gumboots for farm work and wet conditions.",
+    "specifications": {
+      "Material": "PVC",
+      "Size Range": "39-45"
+    },
+    "images": ["https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "AgriWear",
+    "model": "GB-100"
+  },
+  {
+    "id": "ag-040",
+    "name": "Ox-Plough Strong Type",
+    "category": "agricultural",
+    "subcategory": "Ploughs",
+    "price": 350000,
+    "description": "Strong-type ox plough for traditional ploughing and land preparation.",
+    "specifications": {
+      "Type": "Strong Type",
+      "Material": "Forged steel"
+    },
+    "images": ["https://images.unsplash.com/photo-1527694224013-d0843214b19b?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "AgriClassic",
+    "model": "OP-STRONG"
   }
 ];
 
@@ -173,7 +523,7 @@ const agriculturalProducts: Product[] = [
   ];
   const manufacturers = ['AgriTech', 'FarmMaster', 'CropPro', 'FieldKing', 'AgroMax'];
 
-  for (let i = 8; i <= 55; i++) {
+  for (let i = 8; i <= 25; i++) {
     const productType = productTypes[(i - 8) % productTypes.length];
     const manufacturer = manufacturers[(i - 8) % manufacturers.length];
 
@@ -348,6 +698,178 @@ const beekeepingProducts: Product[] = [
     "featured": false,
     "manufacturer": "Ottoman Enterprise",
     "model": "NS-001"
+  },
+  {
+    "id": "B1",
+    "name": "Bee Hives KTB",
+    "category": "beekeeping",
+    "subcategory": "Hive Equipment",
+    "price": 85000,
+    "description": "KTB-style bee hive suitable for commercial beekeeping and colony expansion.",
+    "specifications": {
+      "Type": "KTB",
+      "Material": "Wood",
+      "Package": "Single hive"
+    },
+    "images": ["https://images.unsplash.com/photo-1493238792000-8113da705763?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "Ottoman Enterprise",
+    "model": "KT-001"
+  },
+  {
+    "id": "B6",
+    "name": "Bee Hives Langstroth",
+    "category": "beekeeping",
+    "subcategory": "Hive Equipment",
+    "price": 180000,
+    "description": "Langstroth bee hive designed for easy frame handling and honey management.",
+    "specifications": {
+      "Type": "Langstroth",
+      "Material": "Wood",
+      "Package": "Single hive"
+    },
+    "images": ["https://images.unsplash.com/photo-1524594157360-61597f2d90b5?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "Ottoman Enterprise",
+    "model": "LS-001"
+  },
+  {
+    "id": "B12",
+    "name": "Honey Harvesting Gear",
+    "category": "beekeeping",
+    "subcategory": "Harvesting Equipment",
+    "price": 150000,
+    "description": "Complete honey harvesting gear kit for efficient extraction and transport.",
+    "specifications": {
+      "Type": "Complete kit",
+      "Contents": "Frames, tools, containers"
+    },
+    "images": ["https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "BeePro",
+    "model": "HHG-001"
+  },
+  {
+    "id": "B13",
+    "name": "Smoker Diamond",
+    "category": "beekeeping",
+    "subcategory": "Hive Equipment",
+    "price": 50000,
+    "description": "Diamond smoker for gentle hive calming during inspections.",
+    "specifications": {
+      "Type": "Smoker",
+      "Material": "Metal"
+    },
+    "images": ["https://images.unsplash.com/photo-1492522791000-59d9345be5ff?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "Diamond",
+    "model": "SM-001"
+  },
+  {
+    "id": "B14",
+    "name": "Honey Bait Block",
+    "category": "beekeeping",
+    "subcategory": "Attractants",
+    "price": 30000,
+    "description": "Honey bait block to attract bees for colony relocation and monitoring.",
+    "specifications": {
+      "Type": "Bait block",
+      "Weight": "1 block"
+    },
+    "images": ["https://images.unsplash.com/photo-1465188162913-8fb2b1c2a9d6?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "BeeMate",
+    "model": "HB-001"
+  },
+  {
+    "id": "B15",
+    "name": "Honey Tester Hydrometer",
+    "category": "beekeeping",
+    "subcategory": "Testing Equipment",
+    "price": 300000,
+    "description": "Hydrometer for precise honey moisture testing and quality control.",
+    "specifications": {
+      "Type": "Hydrometer",
+      "Model": "Honey tester"
+    },
+    "images": ["https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "HoneyTest",
+    "model": "HT-100"
+  },
+  {
+    "id": "B16",
+    "name": "Honey Refractometer",
+    "category": "beekeeping",
+    "subcategory": "Testing Equipment",
+    "price": 400000,
+    "description": "Precision refractometer for measuring honey moisture content accurately.",
+    "specifications": {
+      "Type": "Refractometer",
+      "Origin": "UK model"
+    },
+    "images": ["https://images.unsplash.com/photo-1518773553398-650c184e0bb3?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "Atago",
+    "model": "HR-100"
+  },
+  {
+    "id": "B17",
+    "name": "Honey Testing Kit",
+    "category": "beekeeping",
+    "subcategory": "Testing Equipment",
+    "price": 350000,
+    "description": "Complete honey testing kit with Atago/UK model instruments.",
+    "specifications": {
+      "Type": "Testing kit",
+      "Contents": "Refractometer, hydrometer"
+    },
+    "images": ["https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "HoneyTest",
+    "model": "HTK-001"
+  },
+  {
+    "id": "B18",
+    "name": "Stick Candle Mold",
+    "category": "beekeeping",
+    "subcategory": "Candle Making",
+    "price": 200000,
+    "description": "Stick candle mold for producing beekeeping candles from beeswax.",
+    "specifications": {
+      "Type": "Mold",
+      "Capacity": "Multiple sticks"
+    },
+    "images": ["https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "WaxCraft",
+    "model": "SCM-001"
+  },
+  {
+    "id": "B19",
+    "name": "Double Stainless Steel Filter",
+    "category": "beekeeping",
+    "subcategory": "Honey Processing Equipment",
+    "price": 70000,
+    "description": "Double stainless steel filter for clean honey filtration before packaging.",
+    "specifications": {
+      "Type": "Double filter",
+      "Material": "Stainless steel"
+    },
+    "images": ["https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "BeePro",
+    "model": "DSF-001"
   }
 ];
 
@@ -358,7 +880,7 @@ const beekeepingProducts: Product[] = [
   ];
   const manufacturers = ['BeeMax', 'HoneyPro', 'HiveTech', 'BeeKeeper Supply', 'ApiMax'];
 
-  for (let i = 12; i <= 52; i++) {
+  for (let i = 12; i <= 17; i++) {
     const productType = productTypes[(i - 12) % productTypes.length];
     const manufacturer = manufacturers[(i - 12) % manufacturers.length];
 
@@ -497,7 +1019,7 @@ const vocationalProducts: Product[] = [
   ];
   const manufacturers = ['ProTool', 'WorkMaster', 'IndustrialMax', 'TradePro', 'CraftTech'];
 
-  for (let i = 11; i <= 50; i++) {
+  for (let i = 11; i <= 29; i++) {
     const productType = productTypes[(i - 11) % productTypes.length];
     const manufacturer = manufacturers[(i - 11) % manufacturers.length];
 
@@ -523,7 +1045,62 @@ const vocationalProducts: Product[] = [
   }
 }
 
-const waterProducts: Product[] = [];
+const waterProducts: Product[] = [
+  {
+    "id": "wt-001",
+    "name": "Watering Can",
+    "category": "water",
+    "subcategory": "Manual Watering",
+    "price": 10000,
+    "description": "Plastic watering can with a clear finish for precise garden watering.",
+    "specifications": {
+      "Material": "Plastic",
+      "Capacity": "10 litres",
+      "Finish": "Clear"
+    },
+    "images": ["https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "AquaFlow",
+    "model": "WC-10"
+  },
+  {
+    "id": "wt-002",
+    "name": "Jerry Can",
+    "category": "water",
+    "subcategory": "Manual Watering",
+    "price": 12000,
+    "description": "Plastic jerry can with a clear finish for safe water storage and transport.",
+    "specifications": {
+      "Material": "Plastic",
+      "Capacity": "20 litres",
+      "Finish": "Clear"
+    },
+    "images": ["https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "AquaFlow",
+    "model": "JC-20"
+  },
+  {
+    "id": "wt-003",
+    "name": "Foot Pump",
+    "category": "water",
+    "subcategory": "Pumps",
+    "price": 1800000,
+    "description": "England-made foot pump with rubber hose pipe for reliable water lifting.",
+    "specifications": {
+      "Origin": "England",
+      "Hose": "Rubber hose pipe",
+      "Usage": "Foot-operated pump"
+    },
+    "images": ["https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800"],
+    "inStock": true,
+    "featured": false,
+    "manufacturer": "HydroTech",
+    "model": "FP-ENG"
+  }
+];
 
 {
   const productTypes = [
@@ -532,7 +1109,7 @@ const waterProducts: Product[] = [];
   ];
   const manufacturers = ['AquaFlow', 'HydroTech', 'PureWater Solutions', 'BlueWave Systems', 'EcoH2O'];
 
-  for (let i = 1; i <= 50; i++) {
+  for (let i = 1; i <= 22; i++) {
     const productType = productTypes[(i - 1) % productTypes.length];
     const manufacturer = manufacturers[(i - 1) % manufacturers.length];
 

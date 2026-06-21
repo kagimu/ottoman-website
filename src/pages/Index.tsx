@@ -15,7 +15,7 @@ import heroSlide1 from '@/assets/hero-slide-1.jpg';
 import heroSlide2 from '@/assets/hero-slide-2.jpg';
 import heroSlide3 from '@/assets/hero-slide-3.jpg';
 import heroSlide4 from '@/assets/beekeeper-working-bee-farm.jpg';
-import heroSlide5 from '@/assets/pexels-pavel-danilyuk-6461131.jpg';
+import heroSlide5 from '@/assets/pexels-pixabay-236380.jpg';
 import heroSlide6 from '@/assets/water-pump.jpg';
 import heroSlide7 from '@/assets/pexels-avinash-singh-261980-921719.jpg';
 import heroSlide8 from '@/assets/close-up-picture-garden-equipment-put-soil.jpg';
