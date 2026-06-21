@@ -35,9 +35,9 @@ export const categories = [
     icon: '🔧'
   },
   {
-    id: 'water',
-    name: 'Water Equipment',
-    description: 'Advanced water systems and treatment solutions',
+    id: 'medical',
+    name: 'medical Equipment',
+    description: 'Advanced medical systems and treatment solutions',
     icon: '💧'
   },
   
@@ -1045,126 +1045,287 @@ const vocationalProducts: Product[] = [
   }
 }
 
-const waterProducts: Product[] = [
+const medicalproducts: Product[] = [
+  {const medicalproducts: Product[] = [
   {
-    "id": "wt-001",
-    "name": "Watering Can",
-    "category": "water",
-    "subcategory": "Manual Watering",
-    "price": 10000,
-    "description": "Plastic watering can with a clear finish for precise garden watering.",
-    "specifications": {
-      "Material": "Plastic",
-      "Capacity": "10 litres",
-      "Finish": "Clear"
+    id: "md-001",
+    name: "Digital Blood Pressure Monitor",
+    category: "diagnostic",
+    subcategory: "Monitoring Devices",
+    price: 85000,
+    description: "Automatic blood pressure monitor for accurate home and clinical use.",
+    specifications: {
+      Type: "Digital",
+      Display: "LCD",
+      Power: "Battery Operated"
     },
-    "images": ["https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=800"],
-    "inStock": true,
-    "featured": false,
-    "manufacturer": "AquaFlow",
-    "model": "WC-10"
-  },
-  {
-    "id": "wt-002",
-    "name": "Jerry Can",
-    "category": "water",
-    "subcategory": "Manual Watering",
-    "price": 12000,
-    "description": "Plastic jerry can with a clear finish for safe water storage and transport.",
-    "specifications": {
-      "Material": "Plastic",
-      "Capacity": "20 litres",
-      "Finish": "Clear"
-    },
-    "images": ["https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=800"],
-    "inStock": true,
-    "featured": false,
-    "manufacturer": "AquaFlow",
-    "model": "JC-20"
-  },
-  {
-    "id": "wt-003",
-    "name": "Foot Pump",
-    "category": "water",
-    "subcategory": "Pumps",
-    "price": 1800000,
-    "description": "England-made foot pump with rubber hose pipe for reliable water lifting.",
-    "specifications": {
-      "Origin": "England",
-      "Hose": "Rubber hose pipe",
-      "Usage": "Foot-operated pump"
-    },
-    "images": ["https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800"],
-    "inStock": true,
-    "featured": false,
-    "manufacturer": "HydroTech",
-    "model": "FP-ENG"
-  }
-];
-
-{
-  const productTypes = [
-    'Water Pump', 'Filtration System', 'Water Treatment Unit', 'Irrigation Controller', 'Pressure Tank',
-    'Water Heater', 'Reverse Osmosis System', 'Sewage Pump', 'Submersible Pump', 'Water Meter'
-  ];
-  const manufacturers = ['AquaFlow', 'HydroTech', 'PureWater Solutions', 'BlueWave Systems', 'EcoH2O'];
-
-  for (let i = 1; i <= 22; i++) {
-    const productType = productTypes[(i - 1) % productTypes.length];
-    const manufacturer = manufacturers[(i - 1) % manufacturers.length];
-
-    waterProducts.push({
-      id: `wt-${i.toString().padStart(3, '0')}`,
-      name: `${manufacturer} ${productType} ${Math.floor(Math.random() * 9000) + 1000}`,
-      category: 'water',
-      price: Math.floor(Math.random() * 100000) + 5000,
-      description: `Reliable ${productType.toLowerCase()} for efficient water management and distribution.`,
-      specifications: {
-        'Warranty': `${Math.floor(Math.random() * 3) + 1} years`,
-        'Power Supply': '220V AC',
-        'Certification': 'ISO 9001, CE',
-        'Material': 'Stainless Steel',
-        'Service': '24/7 support available'
-      },
-      images: ['https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800', 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800'],
-      inStock: Math.random() > 0.15,
-      featured: Math.random() > 0.8,
-      manufacturer,
-      model: `${productType.replace(' ', '')}-${Math.floor(Math.random() * 9000) + 1000}`
-    });
-  }
-}
-
-const promotionalProducts: Product[] = [
-  {
-    id: "37",
-    name: "Custom Branded Mug",
-    specifications: { "Material": "Ceramic", "Type": "Promotional" },
-    price: 5000,
-    category: "promotional",
-    subcategory: "Custom Gifts",
-    description: "Customizable promotional mug with your logo",
-    manufacturer: "PromoCorp",
-    model: "MUG-001",
-    inStock: true,
-    featured: false,
-    images: ["https://i.imghippo.com/files/rm2815tgU.jpg"]
-  },
-  {
-    id: "38",
-    name: "Promotional T-Shirt",
-    specifications: { "Material": "Cotton", "Type": "Promotional" },
-    price: 12000,
-    category: "promotional",
-    subcategory: "T-Shirts",
-    description: "High-quality promotional T-shirt for events and giveaways",
-    manufacturer: "PromoCorp",
-    model: "TS-001",
+    images: ["https://images.unsplash.com/photo-1584515933487-779824d29309?w=800"],
     inStock: true,
     featured: true,
-    images: ["https://i.imghippo.com/files/ysdP2591Jqk.jpg"]
-  }
-];
+    manufacturer: "HealthCare",
+    model: "BPM-100"
+  },
+  {
+    id: "md-002",
+    name: "Pulse Oximeter",
+    category: "diagnostic",
+    subcategory: "Monitoring Devices",
+    price: 45000,
+    description: "Finger pulse oximeter for measuring blood oxygen saturation and pulse rate.",
+    specifications: {
+      Type: "Portable",
+      Display: "OLED",
+      Power: "Battery Operated"
+    },
+    images: ["https://images.unsplash.com/photo-1584362917165-526a968579e8?w=800"],
+    inStock: true,
+    featured: false,
+    manufacturer: "MediCare",
+    model: "PO-50"
+  },
+  {
+    id: "md-003",
+    name: "Infrared Thermometer",
+    category: "diagnostic",
+    subcategory: "Temperature Devices",
+    price: 35000,
+    description: "Non-contact infrared thermometer for quick temperature readings.",
+    specifications: {
+      Type: "Infrared",
+      Range: "32°C - 42.9°C",
+      Display: "LCD"
+    },
+    images: ["https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=800"],
+    inStock: true,
+    featured: false,
+    manufacturer: "ThermoCare",
+    model: "IT-200"
+  },
+  {
+    id: "md-004",
+    name: "Nebulizer Machine",
+    category: "respiratory",
+    subcategory: "Therapy Equipment",
+    price: 120000,
+    description: "Portable nebulizer for respiratory therapy.",
+    specifications: {
+      Type: "Compressor",
+      Power: "220V",
+      FlowRate: "0.3 ml/min"
+    },
+    images: ["https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800"],
+    inStock: true,
+    featured: true,
+    manufacturer: "AeroCare",
+    model: "NB-300"
+  },
+  {
+    id: "md-005",
+    name: "Glucometer",
+    category: "diagnostic",
+    subcategory: "Blood Sugar Monitoring",
+    price: 60000,
+    description: "Blood glucose meter for diabetic monitoring.",
+    specifications: {
+      Type: "Digital",
+      Sample: "Capillary Blood",
+      Memory: "500 Records"
+    },
+    images: ["https://images.unsplash.com/photo-1579154204601-01588f351e67?w=800"],
+    inStock: true,
+    featured: false,
+    manufacturer: "GlucoPro",
+    model: "GM-100"
+  },
+  {
+    id: "md-006",
+    name: "Digital Weighing Scale",
+    category: "fitness",
+    subcategory: "Measurement Equipment",
+    price: 50000,
+    description: "Electronic weighing scale for body weight monitoring.",
+    specifications: {
+      Type: "Digital",
+      Capacity: "180kg",
+      Display: "LCD"
+    },
+    images: ["https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800"],
+    inStock: true,
+    featured: false,
+    manufacturer: "BodyCare",
+    model: "WS-180"
+  },
+  {
+    id: "md-007",
+    name: "Stethoscope",
+    category: "diagnostic",
+    subcategory: "Medical Instruments",
+    price: 40000,
+    description: "Professional acoustic stethoscope for medical examinations.",
+    specifications: {
+      Material: "Stainless Steel",
+      Type: "Dual Head"
+    },
+    images: ["https://images.unsplash.com/photo-1580281657527-47e1f0d44b4f?w=800"],
+    inStock: true,
+    featured: true,
+    manufacturer: "MediSound",
+    model: "ST-01"
+  },
+  {
+    id: "md-008",
+    name: "Wheelchair",
+    category: "mobility",
+    subcategory: "Patient Mobility",
+    price: 450000,
+    description: "Foldable wheelchair with comfortable seating.",
+    specifications: {
+      Material: "Steel",
+      Capacity: "120kg"
+    },
+    images: ["https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=800"],
+    inStock: true,
+    featured: true,
+    manufacturer: "MobilityCare",
+    model: "WC-120"
+  },
+  {
+    id: "md-009",
+    name: "Walking Frame",
+    category: "mobility",
+    subcategory: "Patient Support",
+    price: 150000,
+    description: "Aluminum walking frame for elderly support.",
+    specifications: {
+      Material: "Aluminum",
+      Adjustable: "Yes"
+    },
+    images: ["https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800"],
+    inStock: true,
+    featured: false,
+    manufacturer: "MobilityCare",
+    model: "WF-10"
+  },
+  {
+    id: "md-010",
+    name: "Crutches",
+    category: "mobility",
+    subcategory: "Patient Support",
+    price: 80000,
+    description: "Adjustable aluminum crutches for mobility assistance.",
+    specifications: {
+      Material: "Aluminum",
+      Adjustable: "Yes"
+    },
+    images: ["https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800"],
+    inStock: true,
+    featured: false,
+    manufacturer: "MobilityCare",
+    model: "CR-20"
+  },
+  {
+    id: "md-011",
+    name: "Examination Bed",
+    category: "hospital",
+    subcategory: "Furniture",
+    price: 650000,
+    description: "Comfortable examination couch for clinics and hospitals.",
+    specifications: {
+      Material: "Steel Frame",
+      Length: "190cm"
+    },
+    images: ["https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800"],
+    inStock: true,
+    featured: false,
+    manufacturer: "HospitalPro",
+    model: "EB-190"
+  },
+  {
+    id: "md-012",
+    name: "Oxygen Concentrator",
+    category: "respiratory",
+    subcategory: "Therapy Equipment",
+    price: 1200000,
+    description: "Medical oxygen concentrator for home and hospital use.",
+    specifications: {
+      FlowRate: "5L/min",
+      Power: "220V"
+    },
+    images: ["https://images.unsplash.com/photo-1584515933487-779824d29309?w=800"],
+    inStock: true,
+    featured: true,
+    manufacturer: "OxyCare",
+    model: "OC-5"
+  },
+  {
+    id: "md-013",
+    name: "Suction Machine",
+    category: "hospital",
+    subcategory: "Emergency Equipment",
+    price: 500000,
+    description: "Portable suction machine for airway clearance.",
+    specifications: {
+      Type: "Electric",
+      Capacity: "1000ml"
+    },
+    images: ["https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800"],
+    inStock: true,
+    featured: false,
+    manufacturer: "MedVac",
+    model: "SM-100"
+  },
+  {
+    id: "md-014",
+    name: "ECG Machine",
+    category: "cardiology",
+    subcategory: "Diagnostic Equipment",
+    price: 2500000,
+    description: "12-channel ECG machine for heart monitoring.",
+    specifications: {
+      Channels: "12",
+      Display: "LCD"
+    },
+    images: ["https://images.unsplash.com/photo-1581595219315-a187dd40c322?w=800"],
+    inStock: true,
+    featured: true,
+    manufacturer: "CardioPro",
+    model: "ECG-12"
+  },
+  {
+    id: "md-015",
+    name: "Hospital Bed",
+    category: "hospital",
+    subcategory: "Furniture",
+    price: 1800000,
+    description: "Adjustable hospital bed with side rails.",
+    specifications: {
+      Material: "Steel",
+      Adjustable: "Yes"
+    },
+    images: ["https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800"],
+    inStock: true,
+    featured: true,
+    manufacturer: "HospitalPro",
+    model: "HB-01"
+  },
+  {
+    id: "md-016",
+    name: "Patient Monitor",
+    category: "monitoring",
+    subcategory: "Critical Care",
+    price: 3500000,
+    description: "Multiparameter patient monitor for ICU and emergency care.",
+    specifications: {
+      Display: "12 inch",
+      Parameters: "ECG, SPO2, NIBP"
+    },
+    images: ["https://images.unsplash.com/photo-1581595219315-a187dd40c322?w=800"],
+    inStock: true,
+    featured: true,
+    manufacturer: "LifeCare
+  },
+ 
+
 
 export const allProducts: Product[] = [
   ...agriculturalProducts,
