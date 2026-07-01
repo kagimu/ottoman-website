@@ -13,7 +13,7 @@ export interface Product {
   model: string;
 }
 
-export type ProductCategory = 'agricultural' | 'beekeeping' | 'vocational' | 'water' | 'promotional';
+export type ProductCategory = 'agricultural' | 'beekeeping' | 'vocational' | 'water' | 'promotional' | 'medical';
 
 export const categories = [
   {
@@ -1030,7 +1030,7 @@ const vocationalProducts: Product[] = [
       price: Math.floor(Math.random() * 2000) + 100,
       description: `Professional-grade ${productType.toLowerCase()} for demanding work environments.`,
       specifications: {
-        'Power Rating': `${Math.floor(Matgith.random() * 2000) + 500}W`,
+        'Power Rating': `${Math.floor(Math.random() * 2000) + 500}W`,
         'Warranty': `${Math.floor(Math.random() * 3) + 1} years`,
         'Safety Rating': 'IP65',
         'Material': 'Industrial grade',
@@ -1322,6 +1322,7 @@ const medicalproducts: Product[] = [
     inStock: true,
     featured: true,
     manufacturer: "LifeCare",
+    model: "PM-01"
   },
 ]; 
 
@@ -1330,7 +1331,7 @@ export const allProducts: Product[] = [
   ...agriculturalProducts,
   ...beekeepingProducts,
   ...vocationalProducts,
-  ...medicalProducts,
+  ...medicalproducts,
 ];
 
 export const getProductsByCategory = (category: ProductCategory): Product[] => {
