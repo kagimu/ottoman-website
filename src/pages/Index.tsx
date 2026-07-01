@@ -25,7 +25,7 @@ import heroSlide9 from '@/assets/14974.jpg';
 import categoryAgricultural from '@/assets/category-agricultural.jpg';
 import categoryBeekeeping from '@/assets/category-beekeeping.jpg';
 import categoryVocational from '@/assets/category-vocational.jpg';
-import categorymedical from '@/assets/medical-equipment.jpg';
+import categoryMedical from '@/assets/medical-equipment.jpg';
 
 const categoryImages = {
   agricultural: categoryAgricultural,

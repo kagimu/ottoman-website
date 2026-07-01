@@ -24,6 +24,7 @@ import { cn } from '@/lib/utils';
 import categoryAgricultural from '@/assets/category-agricultural.jpg';
 import categoryBeekeeping from '@/assets/category-beekeeping.jpg';
 import categoryVocational from '@/assets/category-vocational.jpg';
+import categoryMedical from '@/assets/medical-equipment.jpg';
 import categoryWater from '@/assets/water-pump.jpg';
 
 
